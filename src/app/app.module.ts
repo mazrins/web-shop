@@ -11,12 +11,21 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { ProductsListComponent } from './products-list/products-list.component';
+import { LayoutModule } from '@angular/cdk/layout';
+
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent
+    NavigationComponent,
+    ProductsListComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +37,10 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     MatSidenavModule,
     MatListModule,
+    MatMenuModule,
+    MatCardModule,
+    MatGridListModule,
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
