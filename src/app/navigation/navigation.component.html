@@ -1,0 +1,28 @@
+<mat-drawer-container class="example-container" fullscreen>
+    <mat-drawer #drawer class="sidenav-class" mode="side" opened>
+        <button (click)="showFiller = !showFiller" mat-raised-button color="primary">
+            <mat-icon>arrow_right_alt</mat-icon>
+        </button>
+
+        <mat-nav-list>
+            <mat-list-item>
+                <mat-icon mat-list-icon>home</mat-icon>
+                <h4 mat-line *ngIf="false">Home</h4>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon mat-list-icon>person</mat-icon>
+                <h4 mat-line *ngIf="false">Management A</h4>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+        <mat-toolbar color="primary">
+            <button type="button" mat-button (click)="drawer.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button></mat-toolbar>
+        <p>sadrzaj</p>
+
+    </div>
+
+</mat-drawer-container>
