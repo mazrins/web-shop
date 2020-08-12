@@ -14,39 +14,33 @@
                         <mat-icon>arrow_right_alt</mat-icon>
                     </a>
                 </ng-template>
-
             </mat-list-item>
 
-            <mat-list-item>
-                <mat-icon mat-list-icon routerLink="/">home</mat-icon>
+            <mat-list-item routerLink="/">
+                <mat-icon mat-list-icon>home</mat-icon>
                 <h4 mat-line *ngIf="isOpen">Početna</h4>
             </mat-list-item>
 
-            <mat-list-item>
-                <mat-icon mat-list-icon routerLink="profile">person</mat-icon>
+            <mat-list-item routerLink="profile">
+                <mat-icon mat-list-icon>person</mat-icon>
                 <h4 mat-line *ngIf="isOpen">Profil</h4>
             </mat-list-item>
 
-            <mat-list-item>
-                <mat-icon mat-list-icon routerLink="admin">admin_panel_settings</mat-icon>
+            <mat-list-item routerLink="admin">
+                <mat-icon mat-list-icon>admin_panel_settings</mat-icon>
                 <h4 mat-line *ngIf="isOpen">Admin panel</h4>
             </mat-list-item>
 
-            <mat-list-item>
-                <mat-icon mat-list-icon routerLink="products">shopping_cart</mat-icon>
+            <mat-list-item routerLink="shopping-cart">
+                <mat-icon mat-list-icon>shopping_cart</mat-icon>
                 <h4 mat-line *ngIf="isOpen">Košarica</h4>
             </mat-list-item>
 
-            <mat-list-item>
-                <mat-icon mat-list-icon routerLink="products">exit_to_app</mat-icon>
+            <mat-list-item routerLink="products">
+                <mat-icon mat-list-icon>exit_to_app</mat-icon>
                 <h4 mat-line *ngIf="isOpen">Izlaz</h4>
             </mat-list-item>
-
-
-
         </mat-nav-list>
-
-
     </mat-drawer>
 
     <div class="example-sidenav-content">
@@ -61,7 +55,11 @@
             </button>
             <mat-menu #menu="matMenu">
                 <button mat-menu-item>
-                    <mat-icon>notifications_off</mat-icon>
+                    <mat-icon>settings</mat-icon>
+                    <span>Postavke</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>exit_to_app</mat-icon>
                     <span>Odjava</span>
                 </button>
             </mat-menu>
