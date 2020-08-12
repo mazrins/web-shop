@@ -18,6 +18,7 @@ import { ProductsListComponent } from './products-list/products-list.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ProfileComponent } from './profile/profile.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 
 
@@ -30,6 +31,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
     ProductsListComponent,
     ProfileComponent,
     AdminDashboardComponent,
+    ShoppingCartComponent,
   ],
   imports: [
     BrowserModule,
