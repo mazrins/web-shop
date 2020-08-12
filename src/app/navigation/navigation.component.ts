@@ -7,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
   showFiller = false;
+  isOpen = false;
   constructor() { }
 
+  arrowIcon() {
+    this.isOpen = !this.isOpen;
+  }
   ngOnInit(): void {
   }
 

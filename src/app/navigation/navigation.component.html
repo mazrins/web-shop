@@ -4,23 +4,45 @@
         </button> -->
 
         <mat-nav-list>
-            <mat-list-item>
-                <a>
-                    <mat-icon>arrow_right_alt</mat-icon>
+            <mat-list-item (click)="arrowIcon()">
+                <a *ngIf="isOpen; else elseLeft">
+                    <mat-icon>keyboard_backspace</mat-icon>
                 </a>
+
+                <ng-template #elseLeft>
+                    <a #elseLeft>
+                        <mat-icon>arrow_right_alt</mat-icon>
+                    </a>
+                </ng-template>
+
             </mat-list-item>
+
             <mat-list-item>
                 <mat-icon mat-list-icon routerLink="/">home</mat-icon>
-                <h4 mat-line *ngIf="false">Home</h4>
+                <h4 mat-line *ngIf="isOpen">Početna</h4>
             </mat-list-item>
+
             <mat-list-item>
-                <mat-icon mat-list-icon routerLink="products">person</mat-icon>
-                <h4 mat-line *ngIf="false">Management A</h4>
+                <mat-icon mat-list-icon routerLink="profile">person</mat-icon>
+                <h4 mat-line *ngIf="isOpen">Profil</h4>
             </mat-list-item>
+
+            <mat-list-item>
+                <mat-icon mat-list-icon routerLink="products">admin_panel_settings</mat-icon>
+                <h4 mat-line *ngIf="isOpen">Admin panel</h4>
+            </mat-list-item>
+
+            <mat-list-item>
+                <mat-icon mat-list-icon routerLink="products">shopping_cart</mat-icon>
+                <h4 mat-line *ngIf="isOpen">Košarica</h4>
+            </mat-list-item>
+
             <mat-list-item>
                 <mat-icon mat-list-icon routerLink="products">exit_to_app</mat-icon>
-                <h4 mat-line *ngIf="false"></h4>
+                <h4 mat-line *ngIf="isOpen">Izlaz</h4>
             </mat-list-item>
+
+
 
         </mat-nav-list>
 
@@ -39,16 +61,8 @@
             </button>
             <mat-menu #menu="matMenu">
                 <button mat-menu-item>
-                    <mat-icon>dialpad</mat-icon>
-                    <span>Redial</span>
-                </button>
-                <button mat-menu-item disabled>
-                    <mat-icon>voicemail</mat-icon>
-                    <span>Check voice mail</span>
-                </button>
-                <button mat-menu-item>
                     <mat-icon>notifications_off</mat-icon>
-                    <span>Disable alerts</span>
+                    <span>Odjava</span>
                 </button>
             </mat-menu>
         </mat-toolbar>

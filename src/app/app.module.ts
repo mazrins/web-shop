@@ -17,6 +17,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ProfileComponent } from './profile/profile.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 
 
@@ -28,6 +29,7 @@ import { ProfileComponent } from './profile/profile.component';
     NavigationComponent,
     ProductsListComponent,
     ProfileComponent,
+    AdminDashboardComponent,
   ],
   imports: [
     BrowserModule,
