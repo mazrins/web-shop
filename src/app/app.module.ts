@@ -16,6 +16,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -26,6 +27,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     AppComponent,
     NavigationComponent,
     ProductsListComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
