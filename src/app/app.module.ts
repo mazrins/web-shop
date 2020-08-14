@@ -20,8 +20,11 @@ import { ProfileComponent } from './profile/profile.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
+import { AngularFireModule } from '@angular/fire';
 
-
+import { environment } from 'src/environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AddProductComponent } from './add-product/add-product.component';
 
 
 @NgModule({
@@ -32,8 +35,12 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     ProfileComponent,
     AdminDashboardComponent,
     ShoppingCartComponent,
+    AddProductComponent,
   ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
+
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

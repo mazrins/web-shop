@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-products-list',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
 })
 export class ProductsListComponent {
 
-  constructor() { }
+  constructor(private db: AngularFirestore) { }
+
+
 }

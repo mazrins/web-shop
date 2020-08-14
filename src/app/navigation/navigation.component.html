@@ -37,6 +37,21 @@
             </mat-list-item>
 
             <mat-list-item routerLink="products">
+                <mat-icon mat-list-icon>filter_alt</mat-icon>
+                <h4 mat-line *ngIf="isOpen">Filter</h4>
+            </mat-list-item>
+
+            <mat-list-item routerLink="products">
+                <mat-icon mat-list-icon>search</mat-icon>
+                <h4 mat-line *ngIf="isOpen">Pretraživanje</h4>
+            </mat-list-item>
+
+            <mat-list-item routerLink="products">
+                <mat-icon mat-list-icon>category</mat-icon>
+                <h4 mat-line *ngIf="isOpen">Kategorija</h4>
+            </mat-list-item>
+
+            <mat-list-item routerLink="products">
                 <mat-icon mat-list-icon>exit_to_app</mat-icon>
                 <h4 mat-line *ngIf="isOpen">Izlaz</h4>
             </mat-list-item>
