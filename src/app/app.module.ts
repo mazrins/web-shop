@@ -14,8 +14,11 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { ProductsListComponent } from './products-list/products-list.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { MatTabsModule } from '@angular/material/tabs';
+
+
+import { ProductsListComponent } from './products-list/products-list.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
@@ -25,6 +28,9 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AddProductComponent } from './add-product/add-product.component';
+import { ProductsService } from './services/products.service';
+import { AuthService } from './services/auth.service';
+import { ProductsComponent } from './products/products.component';
 
 
 @NgModule({
@@ -36,6 +42,7 @@ import { AddProductComponent } from './add-product/add-product.component';
     AdminDashboardComponent,
     ShoppingCartComponent,
     AddProductComponent,
+    ProductsComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebaseConfig),
@@ -54,8 +61,9 @@ import { AddProductComponent } from './add-product/add-product.component';
     MatCardModule,
     MatGridListModule,
     LayoutModule,
+    MatTabsModule,
   ],
-  providers: [],
+  providers: [AuthService, ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

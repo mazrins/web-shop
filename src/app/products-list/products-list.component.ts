@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { ProductsService } from '../services/products.service';
+
 
 @Component({
   selector: 'app-products-list',
@@ -7,8 +8,12 @@ import { AngularFirestore } from '@angular/fire/firestore';
   styleUrls: ['./products-list.component.css']
 })
 export class ProductsListComponent {
+  products;
+  constructor(private productsService: ProductsService) { }
 
-  constructor(private db: AngularFirestore) { }
-
+  getAllProducts() {
+    this.products = this.productsService.getAllProducts();
+    console.log(this.products);
+  }
 
 }
