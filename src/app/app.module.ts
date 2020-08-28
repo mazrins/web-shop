@@ -36,6 +36,7 @@ import { AuthService } from './services/auth.service';
 import { ProductsComponent } from './products/products.component';
 import { UsersComponent } from './users/users.component';
 import { CategoryComponent } from './category/category.component';
+import { FilterComponent } from './filter/filter.component';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { CategoryComponent } from './category/category.component';
     ProductsComponent,
     UsersComponent,
     CategoryComponent,
+    FilterComponent,
 
   ],
   imports: [
