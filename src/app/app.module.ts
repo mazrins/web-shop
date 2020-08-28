@@ -35,6 +35,7 @@ import { ProductsService } from './services/products.service';
 import { AuthService } from './services/auth.service';
 import { ProductsComponent } from './products/products.component';
 import { UsersComponent } from './users/users.component';
+import { CategoryComponent } from './category/category.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { UsersComponent } from './users/users.component';
     AddProductComponent,
     ProductsComponent,
     UsersComponent,
+    CategoryComponent,
 
   ],
   imports: [
