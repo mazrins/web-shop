@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -16,7 +17,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatTabsModule } from '@angular/material/tabs';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
 
 import { ProductsListComponent } from './products-list/products-list.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -31,6 +34,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { ProductsService } from './services/products.service';
 import { AuthService } from './services/auth.service';
 import { ProductsComponent } from './products/products.component';
+import { UsersComponent } from './users/users.component';
 
 
 @NgModule({
@@ -43,6 +47,8 @@ import { ProductsComponent } from './products/products.component';
     ShoppingCartComponent,
     AddProductComponent,
     ProductsComponent,
+    UsersComponent,
+
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebaseConfig),
@@ -51,6 +57,7 @@ import { ProductsComponent } from './products/products.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
 
     MatToolbarModule,
     MatIconModule,
@@ -62,6 +69,9 @@ import { ProductsComponent } from './products/products.component';
     MatGridListModule,
     LayoutModule,
     MatTabsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
   ],
   providers: [AuthService, ProductsService],
   bootstrap: [AppComponent]

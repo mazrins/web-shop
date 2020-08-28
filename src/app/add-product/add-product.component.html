@@ -1,1 +1,25 @@
-<p>add-product works!</p>
+<div class="add-product">
+    <h4>Dodaj novi proizvod</h4>
+    <form [formGroup]="addProductForm" (ngSubmit)="addProduct()">
+        <mat-form-field appearance="fill">
+            <mat-label>Odaberi kategoriju</mat-label>
+            <mat-select [(value)]="selected" formControlName="kategorija">
+                <mat-option *ngFor="let category of categories" value="category.value">{{category.name}}</mat-option>
+                <mat-option>Dodaj kategoriju</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Naziv</mat-label>
+            <input matInput type="text" formControlName="naziv">
+        </mat-form-field>
+
+        <button mat-raised-button color="warn" type="reset">Resetiraj
+        </button>
+
+        <button mat-raised-button type="submit" color="primary">Dodaj
+        </button>
+
+    </form>
+    <button mat-raised-button (click)="test()">test</button>
+</div>
