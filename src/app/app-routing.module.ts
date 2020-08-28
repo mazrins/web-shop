@@ -6,6 +6,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { CategoryComponent } from './category/category.component';
+import { FilterComponent } from './filter/filter.component';
 
 const routes: Routes = [
   { path: '', component: ProductsListComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'admin', component: AdminDashboardComponent },
   { path: 'shopping-cart', component: ShoppingCartComponent },
   { path: 'add-product', component: AddProductComponent },
-  { path: 'category', component: CategoryComponent }
+  { path: 'category', component: CategoryComponent },
+  { path: 'filter', component: FilterComponent }
 ];
 
 @NgModule({
