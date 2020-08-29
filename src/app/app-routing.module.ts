@@ -7,6 +7,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { CategoryComponent } from './category/category.component';
 import { FilterComponent } from './filter/filter.component';
+import { SearchComponent } from './search/search.component';
+import { AddCategoryComponent } from './add-category/add-category.component';
 
 const routes: Routes = [
   { path: '', component: ProductsListComponent },
@@ -15,7 +17,9 @@ const routes: Routes = [
   { path: 'shopping-cart', component: ShoppingCartComponent },
   { path: 'add-product', component: AddProductComponent },
   { path: 'category', component: CategoryComponent },
-  { path: 'filter', component: FilterComponent }
+  { path: 'filter', component: FilterComponent },
+  { path: 'search', component: SearchComponent },
+  { path: 'add-category', component: AddCategoryComponent }
 ];
 
 @NgModule({

@@ -38,6 +38,7 @@ import { UsersComponent } from './users/users.component';
 import { CategoryComponent } from './category/category.component';
 import { FilterComponent } from './filter/filter.component';
 import { SearchComponent } from './search/search.component';
+import { AddCategoryComponent } from './add-category/add-category.component';
 
 
 @NgModule({
@@ -54,6 +55,7 @@ import { SearchComponent } from './search/search.component';
     CategoryComponent,
     FilterComponent,
     SearchComponent,
+    AddCategoryComponent,
 
   ],
   imports: [

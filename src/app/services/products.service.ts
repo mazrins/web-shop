@@ -6,28 +6,33 @@ import { AngularFirestore } from '@angular/fire/firestore';
   providedIn: 'root'
 })
 export class ProductsService {
-  allCategories = [];
-  constructor(private db: AngularFirestore) { }
+  category = <any>[];
+  products = <any>[];
+  constructor(private db: AngularFirestore) {
+    this.category = this.db.collection('category').valueChanges();
+    this.products = this.db.collection('products').valueChanges();
+  }
 
-  getAllProducts() {
-    console.log(this.db.collection('products').snapshotChanges());
+  addCategory(categoryName) {
+    this.db.collection('category').add({ name: categoryName });
+
   }
 
   addProduct(data) {
-    return this.db.collection('products').add({ data });
+    this.db.collection('products').add(data);
+
+  }
+
+  getAllProducts() {
+    return this.products;
   }
 
   getAllCategories() {
-    this.db.collection('category').snapshotChanges().subscribe(category => category.forEach(category => console.log(category)))
-
-    this.db.collection('products').snapshotChanges().subscribe(products =>
-      products.forEach(product => this.allCategories.push(product.payload.doc.data()))
-    )
-    return this.allCategories;
-
+    return this.category;
   }
+
   test() {
-    // this.db.collection('category').snapshotChanges().subscribe(category => category.forEach(product => console.log(product.payload.doc.data)));
+    return this.category;
 
   }
 }

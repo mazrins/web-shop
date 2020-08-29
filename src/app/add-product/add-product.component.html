@@ -4,8 +4,8 @@
         <mat-form-field appearance="fill">
             <mat-label>Odaberi kategoriju</mat-label>
             <mat-select [(value)]="selected" formControlName="kategorija">
-                <mat-option *ngFor="let category of categories" value="category.value">{{category.name}}</mat-option>
-                <mat-option>Dodaj kategoriju</mat-option>
+                <mat-option *ngFor="let category of categories" value={{category.name}}>{{category.name}}</mat-option>
+                <mat-option routerLink="/add-category">Dodaj novu kategoriju</mat-option>
             </mat-select>
         </mat-form-field>
 
@@ -21,5 +21,4 @@
         </button>
 
     </form>
-    <button mat-raised-button (click)="test()">test</button>
 </div>

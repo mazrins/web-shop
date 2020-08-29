@@ -1,6 +1,12 @@
+.add-product{
+    display: flex;
+    justify-items: center;
+    align-content: center;
+   
+}
+
 .mat-form-field{
     display: flex;
     justify-items: center;
     align-items: center;
-
 }

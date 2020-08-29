@@ -8,31 +8,37 @@ import { ProductsService } from '../services/products.service';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent implements OnInit {
-
-  constructor(private productService: ProductsService) { }
-  selected = "";
   categories = [];
-
-  ngOnInit(): void {
-    this.getAllCategories();
+  constructor(private productService: ProductsService) {
+    this.productService.test().subscribe(category => this.categories = category);
   }
+  selected = "";
+
+
+  ngOnInit(): void { }
 
   addProductForm = new FormGroup({
     kategorija: new FormControl(''),
     naziv: new FormControl('')
   })
 
+  addCategory() {
+    console.log("add category")
+  }
+
   addProduct() {
-    const { naziv } = this.addProductForm.value
-    this.productService.addProduct(naziv);
+    const { naziv, kategorija } = this.addProductForm.value;
+    const proizvod = {
+      naziv: naziv,
+      kategorija: kategorija
+
+    }
+    this.productService.addProduct(proizvod);
   }
 
   getAllCategories() {
-    this.categories = this.productService.getAllCategories();
-    console.log(this.categories)
+    console.log("getAllCategories");
   }
 
-  test() {
-    this.productService.test();
-  }
+
 }

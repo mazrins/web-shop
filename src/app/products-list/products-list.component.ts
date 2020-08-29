@@ -8,12 +8,11 @@ import { ProductsService } from '../services/products.service';
   styleUrls: ['./products-list.component.css']
 })
 export class ProductsListComponent {
-  products;
-  constructor(private productsService: ProductsService) { }
-
-  getAllProducts() {
-    this.products = this.productsService.getAllProducts();
-    console.log(this.products);
+  products = [];
+  constructor(private productsService: ProductsService) {
+    this.productsService.getAllProducts().subscribe(product => console.log(product));
   }
+
+
 
 }

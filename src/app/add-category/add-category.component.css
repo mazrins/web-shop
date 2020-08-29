@@ -1,0 +1,6 @@
+.add-category{
+    display:flex;
+    flex-direction: column;
+    padding: 12px;
+    margin: 10px;
+}
