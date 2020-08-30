@@ -38,6 +38,8 @@ import { ProductsComponent } from './products/products.component';
 import { UsersComponent } from './users/users.component';
 import { CategoryComponent } from './category/category.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -53,6 +55,8 @@ import { AddCategoryComponent } from './add-category/add-category.component';
     UsersComponent,
     CategoryComponent,
     AddCategoryComponent,
+    LoginComponent,
+    RegisterComponent,
 
   ],
   imports: [
