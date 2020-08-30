@@ -1,3 +1,7 @@
 <ul>
-    <li *ngFor="let category of categories" value={{category.name}}>{{category.name}}</li>
+    <mat-card *ngFor="let category of categories" routerLink="/category/{{category.name}}">
+        <mat-card-content>
+            {{category.name}}
+        </mat-card-content>
+    </mat-card>
 </ul>

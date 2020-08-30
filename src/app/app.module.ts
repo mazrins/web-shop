@@ -20,6 +20,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
 
 import { ProductsListComponent } from './products-list/products-list.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -36,8 +37,6 @@ import { AuthService } from './services/auth.service';
 import { ProductsComponent } from './products/products.component';
 import { UsersComponent } from './users/users.component';
 import { CategoryComponent } from './category/category.component';
-import { FilterComponent } from './filter/filter.component';
-import { SearchComponent } from './search/search.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
 
 
@@ -53,8 +52,6 @@ import { AddCategoryComponent } from './add-category/add-category.component';
     ProductsComponent,
     UsersComponent,
     CategoryComponent,
-    FilterComponent,
-    SearchComponent,
     AddCategoryComponent,
 
   ],
@@ -80,6 +77,8 @@ import { AddCategoryComponent } from './add-category/add-category.component';
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
+    MatTableModule,
+
   ],
   providers: [AuthService, ProductsService],
   bootstrap: [AppComponent]

@@ -31,8 +31,5 @@ export class ProductsService {
     return this.category;
   }
 
-  test() {
-    return this.category;
 
-  }
 }

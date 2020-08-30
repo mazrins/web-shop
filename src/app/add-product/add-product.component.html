@@ -3,7 +3,7 @@
     <form [formGroup]="addProductForm" (ngSubmit)="addProduct()">
         <mat-form-field appearance="fill">
             <mat-label>Odaberi kategoriju</mat-label>
-            <mat-select [(value)]="selected" formControlName="kategorija">
+            <mat-select [(value)]="selected" formControlName="category">
                 <mat-option *ngFor="let category of categories" value={{category.name}}>{{category.name}}</mat-option>
                 <mat-option routerLink="/add-category">Dodaj novu kategoriju</mat-option>
             </mat-select>
@@ -11,7 +11,23 @@
 
         <mat-form-field>
             <mat-label>Naziv</mat-label>
-            <input matInput type="text" formControlName="naziv">
+            <input matInput type="text" formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Opis</mat-label>
+            <textarea matInput placeholder="Unesite opis" formControlName="description"></textarea>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Url slike</mat-label>
+            <input matInput type="text" formControlName="pictureUrl">
+        </mat-form-field>
+
+
+        <mat-form-field>
+            <mat-label>Cijena</mat-label>
+            <input matInput type="text" formControlName="price">
         </mat-form-field>
 
         <button mat-raised-button color="warn" type="reset">Resetiraj

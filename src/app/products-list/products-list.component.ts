@@ -10,7 +10,7 @@ import { ProductsService } from '../services/products.service';
 export class ProductsListComponent {
   products = [];
   constructor(private productsService: ProductsService) {
-    this.productsService.getAllProducts().subscribe(product => console.log(product));
+    this.productsService.getAllProducts().subscribe(product => this.products = product);
   }
 
 

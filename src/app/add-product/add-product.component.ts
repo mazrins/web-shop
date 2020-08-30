@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ProductsService } from '../services/products.service';
+import { Router } from '@angular/router';
+import { ProfileComponent } from '../profile/profile.component';
 
 @Component({
   selector: 'app-add-product',
@@ -9,17 +11,20 @@ import { ProductsService } from '../services/products.service';
 })
 export class AddProductComponent implements OnInit {
   categories = [];
-  constructor(private productService: ProductsService) {
-    this.productService.test().subscribe(category => this.categories = category);
+  constructor(private productService: ProductsService, private router: Router) {
+    this.productService.getAllCategories().subscribe(category => this.categories = category);
   }
   selected = "";
-
+  path: string = "";
 
   ngOnInit(): void { }
 
   addProductForm = new FormGroup({
-    kategorija: new FormControl(''),
-    naziv: new FormControl('')
+    category: new FormControl(''),
+    name: new FormControl(''),
+    pictureUrl: new FormControl(''),
+    description: new FormControl(''),
+    price: new FormControl('')
   })
 
   addCategory() {
@@ -27,17 +32,30 @@ export class AddProductComponent implements OnInit {
   }
 
   addProduct() {
-    const { naziv, kategorija } = this.addProductForm.value;
+    const { category, name, pictureUrl, description, price } = this.addProductForm.value;
     const proizvod = {
-      naziv: naziv,
-      kategorija: kategorija
+      category: category,
+      name: name,
+      description: description,
+      pictureUrl: pictureUrl,
+      price: price,
 
     }
     this.productService.addProduct(proizvod);
+    this.router.navigate(["/"]);
+
   }
 
   getAllCategories() {
     console.log("getAllCategories");
+  }
+
+  upload($event) {
+    this.path = $event.target.files[0];
+  }
+
+  uploadImage() {
+
   }
 
 

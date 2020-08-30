@@ -1,13 +1,31 @@
 <div class="products-class">
+  <span class="example-full-width">
+    <mat-form-field>
+      <mat-label>Pretraži</mat-label>
+      <input matInput placeholder="Pretraži proizvode">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Sortiraj</mat-label>
+      <mat-select>
+        <mat-option>datum - najnoviji</mat-option>
+        <mat-option>datum - najstariji </mat-option>
+        <mat-option>cijena - jeftiniji</mat-option>
+        <mat-option>cijena - skuplji</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </span>
   <mat-card class="card-class" *ngFor="let product of products">
     <mat-card-header>
       <mat-card-title>{{product.name}}</mat-card-title>
     </mat-card-header>
+    <img mat-card-image src="{{product.pictureUrl}}" alt={{product.name}}>
     <mat-card-content>
-      <p>Card content</p>
+      <p>{{product.description}}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button>Like</button>
+      <button mat-button>Opis</button>
+      <button mat-button>Cijena {{product.price}} kn</button>
+      <button mat-button>Dodaj u košaricu</button>
     </mat-card-actions>
   </mat-card>
 
