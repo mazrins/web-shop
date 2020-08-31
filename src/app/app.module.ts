@@ -40,6 +40,7 @@ import { CategoryComponent } from './category/category.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { ProductComponent } from './product/product.component';
 
 
 @NgModule({
@@ -57,6 +58,7 @@ import { RegisterComponent } from './register/register.component';
     AddCategoryComponent,
     LoginComponent,
     RegisterComponent,
+    ProductComponent,
 
   ],
   imports: [

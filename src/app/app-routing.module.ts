@@ -7,6 +7,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { CategoryComponent } from './category/category.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   { path: '', component: ProductsListComponent },
@@ -17,6 +19,8 @@ const routes: Routes = [
   { path: 'category', component: CategoryComponent },
   { path: 'category/:type', component: CategoryComponent },
   { path: 'add-category', component: AddCategoryComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent }
 
 ];
 
