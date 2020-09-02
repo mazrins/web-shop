@@ -9,6 +9,7 @@ import { CategoryComponent } from './category/category.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
   { path: '', component: ProductsListComponent },
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'category/:type', component: CategoryComponent },
   { path: 'add-category', component: AddCategoryComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent }
+  { path: 'register', component: RegisterComponent },
+  { path: 'users', component: UsersComponent },
 
 ];
 

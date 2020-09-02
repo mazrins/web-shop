@@ -23,7 +23,7 @@
                 <h4 mat-line *ngIf="isOpen">Kategorija</h4>
             </mat-list-item>
 
-            <mat-list-item routerLink="profile">
+            <mat-list-item routerLink="users">
                 <mat-icon mat-list-icon>person</mat-icon>
                 <h4 mat-line *ngIf="isOpen">Profil</h4>
             </mat-list-item>
@@ -38,10 +38,19 @@
                 <h4 mat-line *ngIf="isOpen">Košarica</h4>
             </mat-list-item>
 
-            <mat-list-item routerLink="login">
+
+            <mat-list-item *ngIf="isLogedIn; else notLogedIn">
                 <mat-icon mat-list-icon>login</mat-icon>
-                <h4 mat-line *ngIf="isOpen">Prijava</h4>
+                <h4 mat-line *ngIf="isOpen">Odjava</h4>
             </mat-list-item>
+
+            <ng-template #notLogedIn>
+                <mat-list-item routerLink="login">
+                    <mat-icon mat-list-icon>login</mat-icon>
+                    <h4 mat-line *ngIf="isOpen">Prijava</h4>
+                </mat-list-item>
+
+            </ng-template>
 
         </mat-nav-list>
     </mat-drawer>

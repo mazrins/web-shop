@@ -1,1 +1,33 @@
-<p>register works!</p>
+<div class="register-class">
+    <mat-card>
+        <mat-card-title>Registracija</mat-card-title>
+        <mat-card-content>
+            <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+                <mat-form-field>
+                    <mat-label>Email:</mat-label>
+                    <input matInput type="text" formControlName="email" required />
+                    <mat-error>Unesena adresa nije valjana.</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Lozinka</mat-label>
+                    <input matInput formControlName="password" type="password" required minlength="6" />
+                    <mat-error>Lozinka nije važeća.</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Ime:</mat-label>
+                    <input matInput type="text" formControlName="firstName">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Prezime</mat-label>
+                    <input matInput type="text" formControlName="lastName">
+                </mat-form-field>
+                <mat-card-actions>
+                    <a mat-stroked-button routerLink="/login">Prijava</a>
+                    <button mat-raised-button type="submit" color="primary" [disabled]="!registerForm.valid">
+                        Registracija
+                    </button>
+                </mat-card-actions>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

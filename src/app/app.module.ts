@@ -28,6 +28,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -64,6 +65,7 @@ import { ProductComponent } from './product/product.component';
   imports: [
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
+    AngularFireAuthModule,
 
     BrowserModule,
     AppRoutingModule,

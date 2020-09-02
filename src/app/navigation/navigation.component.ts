@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-navigation',
@@ -6,14 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
-  showFiller = false;
-  isOpen = false;
-  constructor() { }
+  showFiller: boolean = false;
+  isOpen: boolean = false;
+  isLogedIn: any;
+  constructor(private auth: AuthService) { }
 
   arrowIcon() {
     this.isOpen = !this.isOpen;
   }
   ngOnInit(): void {
+    this.isLogedIn = this.auth.isAuthenticated();
   }
 
 }
