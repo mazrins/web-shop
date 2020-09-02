@@ -44,6 +44,7 @@ import { RegisterComponent } from './register/register.component';
 import { ProductComponent } from './product/product.component';
 
 import { AuthGuard } from './guard/auth.guard';
+import { UserService } from './services/user.service';
 
 
 @NgModule({
@@ -90,7 +91,7 @@ import { AuthGuard } from './guard/auth.guard';
     MatTableModule,
 
   ],
-  providers: [AuthService, ProductsService, AuthGuard],
+  providers: [AuthService, ProductsService, AuthGuard, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
