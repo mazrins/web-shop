@@ -10,11 +10,12 @@ import { AddCategoryComponent } from './add-category/add-category.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UsersComponent } from './users/users.component';
+import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   { path: '', component: ProductsListComponent },
   { path: 'profile', component: ProfileComponent },
-  { path: 'admin', component: AdminDashboardComponent },
+  { path: 'admin', component: AdminDashboardComponent, canActivate: [AuthGuard] },
   { path: 'shopping-cart', component: ShoppingCartComponent },
   { path: 'add-product', component: AddProductComponent },
   { path: 'category', component: CategoryComponent },

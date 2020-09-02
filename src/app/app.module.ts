@@ -43,6 +43,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ProductComponent } from './product/product.component';
 
+import { AuthGuard } from './guard/auth.guard';
+
 
 @NgModule({
   declarations: [
@@ -88,7 +90,7 @@ import { ProductComponent } from './product/product.component';
     MatTableModule,
 
   ],
-  providers: [AuthService, ProductsService],
+  providers: [AuthService, ProductsService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
